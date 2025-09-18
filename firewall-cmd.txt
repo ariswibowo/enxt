@@ -1,0 +1,25 @@
+# PRODUCTION
+-- APPS Server 1 (Docker)
+sudo firewall-cmd --permanent --add-rich-rule='rule family="ipv4" source address="10.126.102.109" port protocol="tcp" port="2377" accept'
+sudo firewall-cmd --permanent --add-rich-rule='rule family="ipv4" source address="10.126.102.109" port protocol="tcp" port="7946" accept'
+sudo firewall-cmd --permanent --add-rich-rule='rule family="ipv4" source address="10.126.102.109" port protocol="udp" port="7946" accept'
+sudo firewall-cmd --permanent --add-rich-rule='rule family="ipv4" source address="10.126.102.109" port protocol="udp" port="4789" accept'
+
+sudo firewall-cmd --permanent --add-rich-rule='rule family="ipv4" source address="10.126.102.110" port protocol="tcp" port="2377" accept'
+sudo firewall-cmd --permanent --add-rich-rule='rule family="ipv4" source address="10.126.102.110" port protocol="tcp" port="7946" accept'
+sudo firewall-cmd --permanent --add-rich-rule='rule family="ipv4" source address="10.126.102.110" port protocol="udp" port="7946" accept'
+sudo firewall-cmd --permanent --add-rich-rule='rule family="ipv4" source address="10.126.102.110" port protocol="udp" port="4789" accept'
+
+sudo firewall-cmd --permanent --add-rich-rule='rule family="ipv4" source address="10.126.102.111" port protocol="tcp" port="2377" accept'
+sudo firewall-cmd --permanent --add-rich-rule='rule family="ipv4" source address="10.126.102.111" port protocol="tcp" port="7946" accept'
+sudo firewall-cmd --permanent --add-rich-rule='rule family="ipv4" source address="10.126.102.111" port protocol="udp" port="7946" accept'
+sudo firewall-cmd --permanent --add-rich-rule='rule family="ipv4" source address="10.126.102.111" port protocol="udp" port="4789" accept'
+
+-- KAFKA 1 & 2
+sudo firewall-cmd --permanent --add-rich-rule='rule family="ipv4" source address="10.126.102.108" port protocol="tcp" port="9092" accept'
+sudo firewall-cmd --permanent --add-rich-rule='rule family="ipv4" source address="10.126.102.109" port protocol="tcp" port="9092" accept'
+sudo firewall-cmd --permanent --add-rich-rule='rule family="ipv4" source address="10.126.102.110" port protocol="tcp" port="9092" accept'
+sudo firewall-cmd --permanent --add-rich-rule='rule family="ipv4" source address="10.126.102.111" port protocol="tcp" port="9092" accept'
+
+sudo firewall-cmd --reload
+sudo firewall-cmd --list-rich-rules
