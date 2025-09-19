@@ -1,0 +1,74 @@
+{
+  "components": [
+    { "name": "SecurityApi" },
+
+    { "name": "EDrive", "cleanBeforeDeploy": true },
+    { "name": "OpenApi", "tag": "11.2.0" },
+
+    { "name": "eStudio", "tag": "11.3.2" },
+    { "name": "RecoveryManager", "tag": "11.3.2" },
+    { "name": "ReverseProxy", "cleanBeforeDeploy": true },
+
+    { "name": "GraphApi" },
+
+    { "name": "UiApi", "tag": "11.3.1" },
+    { "name": "ModelApi", "tag": "11.3.1" },
+
+    { "name": "NeptuneApi", "tag": "11.1.1" },
+    { "name": "PortfolioAnalyzer", "tag": "11.1.0" },
+    { "name": "Adjustor", "tag": "11.1.1" },
+
+    { "name": "TitaniumApi", "tag": "11.0.2" },
+
+    { "name": "DataQualityAnalyzer", "placement": "deploymentGroup3" },
+
+    { "name": "CalculationPreflightHandler" },
+    { "name": "CalculationMonitor" },
+
+    { "name": "MeasurementCalculator", "tag": "11.0.3", "placement": "deploymentGroup3" },
+    { "name": "IFRS9MeasurementCalculationApi", "tag": "11.0.4" },
+    { "name": "IFRS9MeasurementCalculationLoader", "placement": "deploymentGroup2" },
+    { "name": "IFRS9MeasurementResultWriter", "tag": "11.0.1", "placement": "deploymentGroup4" },
+    { "name": "IFRS9MeasurementAnalyzer" },
+
+    { "name": "StageAssessor", "placement": "deploymentGroup2" },
+    { "name": "CashFlowGenerator", "placement": "deploymentGroup2" },
+    { "name": "LevelAssessor", "placement": "deploymentGroup2" },
+
+    { "name": "ImpairmentCalculator", "tag": "11.1.1", "placement": "deploymentGroup3" },
+    { "name": "IFRS9ImpairmentCalculationApi" },
+    { "name": "IFRS9ImpairmentCalculationLoader", "placement": "deploymentGroup2" },
+    { "name": "IFRS9ImpairmentResultWriter", "tag": "11.0.2", "placement": "deploymentGroup4" },
+
+    { "name": "HistoricalPDCalculator", "tag": "11.2.0", "placement": "deploymentGroup3" },
+    { "name": "HistoricalPDConsolidatedMatrixCalculator", "placement": "deploymentGroup3" },
+    { "name": "HistoricalPDCalculationApi", "tag": "11.2.1" },
+    { "name": "HistoricalPDCalculationLoader", "placement": "deploymentGroup2" },
+    { "name": "HistoricalPDResultWriter", "tag": "11.0.1", "placement": "deploymentGroup4" },
+
+    { "name": "HistoricalLGDCalculator", "tag": "11.0.1", "placement": "deploymentGroup3" },
+    { "name": "HistoricalLGDCalculationApi" },
+    { "name": "HistoricalLGDCalculationLoader", "placement": "deploymentGroup2" },
+    { "name": "HistoricalLGDResultWriter", "tag": "11.0.1", "placement": "deploymentGroup4" },
+    { "name": "HistoricalLGDConsolidator" },
+    { "name": "HistoricalLGDAnalyzer" },
+
+    { "name": "RecoveryAnalysisCalculationApi" },
+    { "name": "RecoveryAnalysisCalculationLoader", "placement": "deploymentGroup2" },
+    { "name": "RecoveryAnalysisResultWriter", "tag": "11.0.1", "placement": "deploymentGroup4" },
+
+    { "name": "PDCurveCalculationApi" },
+    { "name": "PDCurveCalculator", "tag": "11.1.0", "placement": "deploymentGroup3" },
+
+    { "name": "LGDCurveCalculationApi" },
+    { "name": "LGDCurveCalculator", "placement": "deploymentGroup3" },
+
+    { "name": "TitaniumGobbler" },
+    { "name": "TitaniumTransformer", "tag": "11.0.1", "placement": "deploymentGroup2" },
+    { "name": "TitaniumQualigator", "placement": "deploymentGroup3" },
+    { "name": "TitaniumSinker", "tag": "11.1.1", "placement": "deploymentGroup4"  },
+    { "name": "TitaniumWriter", "tag": "11.0.1", "placement": "deploymentGroup4" },
+    { "name": "TitaniumMonitor" },
+    { "name": "EConnect" }
+  ]
+}
