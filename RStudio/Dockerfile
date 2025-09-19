@@ -1,0 +1,21 @@
+FROM rocker/rstudio:4.3.1
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    libcurl4-openssl-dev \
+    libxml2-dev \
+    openjdk-11-jdk \ 
+    unixodbc-dev \
+    odbc-postgresql
+
+# Install R packages
+RUN R -e "install.packages(c('dplyr', 'rJava', 'DescTools', 'base', 'tidyr', 'reshape2', 'xlsx', 'openxlsx', 'readxl','plyr','dplyr','rlang','stringr','car','CADFtest','MuMIn', 'lmtest', 'jsonlite', 'magrittr', 'rjson', 'zoo', 'rlist', 'IDPmisc', 'caret', 'glmnet', 'svDialogs', 'snow', 'parallel', 'MLmetrics', 'psych', 'bit64', 'blob', 'DBI', 'stringdist', 'odbc'))"
+
+# Install the R package from the URL
+RUN Rscript -e "install.packages('https://cran.r-project.org/src/contrib/Archive/rowr/rowr_1.1.3.tar.gz', repos = NULL, type = 'source')"
+
+# Update the driver name
+RUN sudo sed -i 's/\[PostgreSQL ANSI\]/\[PostgreSQL\]/g' /etc/odbcinst.ini
+
+EXPOSE 8787
+CMD ["/init"]
